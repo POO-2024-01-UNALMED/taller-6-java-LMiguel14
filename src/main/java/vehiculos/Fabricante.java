@@ -1,27 +1,29 @@
 package vehiculos;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Fabricante {
-    private ArrayList<Fabricante> fabricantes = new ArrayList<Fabricante>();
+
+    private static ArrayList<Fabricante> fabricantes = new ArrayList<Fabricante>();
     private String nombre;
     private Pais pais;
-
-    public ArrayList<Fabricante> getFabricantes() {
-        return fabricantes;
-    }
 
     public Fabricante(String nombre, Pais p) {
         this.nombre = nombre;
         this.pais = p;
+        Pais.agregarPais(p);
+    }
+
+    public Fabricante() {
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public Pais getPais() {
-        return pais;
+        return this.pais;
     }
 
     public void setNombre(String nombre) {
@@ -32,7 +34,25 @@ public class Fabricante {
         this.pais = pais;
     }
 
-    public void setFabricantes(ArrayList<Fabricante> fabricantes) {
-        this.fabricantes = fabricantes;
+    public static void agregarFabricante(Fabricante f) {
+        Fabricante.fabricantes.add(f);
+
+    }
+
+    public static Fabricante fabricante() {
+
+        Fabricante fabricanteMayor = new Fabricante();
+        int mayor = 0;
+
+        for (Fabricante f : fabricantes) {
+            int num = Collections.frequency(fabricantes, f);
+            if (num > mayor) {
+                mayor = num;
+                fabricanteMayor = f;
+            }
+
+        }
+
+        return fabricanteMayor;
     }
 }

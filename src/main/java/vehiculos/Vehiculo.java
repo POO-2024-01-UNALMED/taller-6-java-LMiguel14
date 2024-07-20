@@ -22,7 +22,6 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
         Fabricante.agregarFabricante(fabricante);
-        Pais.agregarPais(this.fabricante.getPais());
 
     }
 
