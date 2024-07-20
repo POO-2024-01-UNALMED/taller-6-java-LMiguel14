@@ -18,18 +18,9 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    public static void agregarPais(Pais p){
+    public static void agregarPais(Pais p) {
         Pais.paiseslist.add(p);
 
     }
 
-    public static Pais paisMasVendedor() {
-
-        int mayor = 0;
-        Pais pais = null;
-        
-       
-
-        return pais;
-    }
 }
