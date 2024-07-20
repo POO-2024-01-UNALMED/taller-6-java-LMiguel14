@@ -39,7 +39,7 @@ public class Fabricante {
 
     }
 
-    public static Fabricante fabricante() {
+    public static Fabricante fabricaMayorVentas() {
 
         Fabricante fabricanteMayor = new Fabricante();
         int mayor = 0;
