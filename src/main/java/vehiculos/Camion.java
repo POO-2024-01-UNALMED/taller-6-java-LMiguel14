@@ -25,5 +25,4 @@ public class Camion extends Vehiculo {
     public static void setNumCamiones(int numCamiones) {
         Camion.numCamiones = numCamiones;
     }
-
 }
