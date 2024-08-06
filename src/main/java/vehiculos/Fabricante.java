@@ -9,6 +9,8 @@ public class Fabricante {
     private String nombre;
     private Pais pais;
 
+    // constructor Fabricante ----
+
     public Fabricante(String nombre, Pais p) {
         this.nombre = nombre;
         this.pais = p;
